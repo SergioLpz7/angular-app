@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+/* :root{
+  color-scheme: light dark;
+} */
+:root {
+  --color-1: #f9b4b4;
+  --color-2: #b2e0e9;
+  --color-3: #f9d1d1;
+  --color-4: #daf2bb;
+  --color-5: #f4d96b;
+  --color-6: #ffceaf;
+  --color-7: #c4f0f2;
+  --color-8: #ffd1d0;
+}
+@font-face {
+  font-family: hibernate;
+  src: url(/fuentes/Hibernate.otf);
+}
+
+*::after,
+*::before,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+* {
+  color: #603300;
+  
+}
+body {
+  background-color: #ffedce;
+}

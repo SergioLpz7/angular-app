@@ -1,0 +1,15 @@
+<nav [ngClass]="{ navbar: mostrar }">
+  <ul>
+    <li ><a routerLinkActive="active" routerLink="/inicio/inicio">Inicio</a></li>
+    <li>
+      <a (click)="Dropdown()">La Escuela <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
+      <ul class="drop" [ngClass]="{ show: showit }">
+        <li><a routerLinkActive="active" routerLink="/" [ngClass]="{ yees: showit }">Aulas</a></li>
+        <li><a routerLinkActive="active" routerLink="/inicio/inicio" [ngClass]="{ yees: showit }">Patio</a></li>
+      </ul>
+    </li>
+    <li><a routerLinkActive="active" routerLink="/contacto">Contacto</a></li>
+    <li><a routerLinkActive="active" routerLink="/">Que ofrecemos</a></li>
+  </ul>
+</nav>
+<i class="fa-solid fa-bars" id="menu" (click)="mobileMenu()"></i>

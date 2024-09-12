@@ -1,0 +1,87 @@
+/* Mobile First Styles */
+.aviso {
+  display: none;
+  flex-flow: row nowrap;
+  font-size: larger;
+  justify-content: space-around;
+  background-color: #d8fca9;
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.aviso p {
+  color: rgb(0, 0, 0);
+  font-size: .8em;
+  margin: 5px 0;
+}
+
+.aviso a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.iconos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 4px;
+}
+
+.iconos a {
+  margin: 0 10px;
+}
+
+/* Styles for Tablets and Larger Screens */
+@media screen and (min-width: 800px) {
+  .aviso {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+
+    & p {
+
+      font-size: .8em; 
+    }
+    & .iconos {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 10%;
+
+      & .iconos a {
+        margin: 0 10px;
+      }
+    }
+
+    & .contacto {
+      display: flex;
+      flex-direction: row;
+      width: 32%;
+    }
+
+    & .horario {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+    }
+    & div{
+      justify-content: space-between;
+    }
+  }
+}
+
+/* Styles for Larger Screens */
+/* @media screen and (min-width: 992px) {
+  .aviso {
+    flex-direction: row;
+  }
+  
+  .aviso p {
+    font-size: .3vw;
+  }
+} */

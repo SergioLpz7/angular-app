@@ -1,0 +1,163 @@
+nav {
+  position: fixed;
+  top: 6em;
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+  left: -200%;
+  z-index: 10;
+}
+
+ul {  
+  height: 100%;
+  width: 100%;
+  background-color: #353535;
+  z-index: 11;
+  user-select: none;
+  list-style: none;
+}
+
+nav.navbar {
+  left: 0;
+}
+
+#menu {
+  font-size: 1.7em;
+  margin: 1em;
+  position: fixed;
+  right: 10px;
+  top: 2em;
+  cursor: pointer;
+  color: #000000;
+  z-index: 100;
+}
+
+#arrow {
+  transition: all 0.4s ease;
+}
+
+li {
+  width: 100%;
+  border-bottom: 1px solid #444;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 1.4em 0 1.4em 0.5em;
+  width: 100%;
+}
+
+.drop {
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  /* overflow: hidden; */
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.drop li {
+  & a {
+    padding-left: 1em;
+  }
+}
+
+/* Estilos para ordenador */
+
+@media screen and (min-width: 600px) {
+  nav {
+    position: fixed;
+    top: 2em;
+    left: auto;
+    right: 0;
+    height: auto;
+    width: 55%;
+    text-align: center;
+    height: 4em; 
+  }
+  
+  a{
+    padding: 0;
+    font-size: .9em;
+    color: #000000;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: transparent;
+    
+  }
+
+  li {
+    border-bottom: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & a {
+      display: block;
+      font-size: 1.2em;
+      width: auto;
+    }
+    
+    & a:hover {
+      border-bottom: 2px solid red;
+    }
+
+  }
+
+  .drop {
+    /* background-color: #353535; */
+    position: absolute;
+    display: block;
+    margin-top: 8em;
+    position: absolute;
+    width: 100%;
+    height: 5em;
+
+
+    & li {
+      width: 100%;
+      height: 100%;
+    
+      & .yees{
+        pointer-events: auto;
+        z-index: 1000;
+      }
+
+      & a {
+        pointer-events: none;
+        display: block;
+        padding: 0;
+      }
+    }
+
+  } 
+
+  .show {
+    display: block!important;
+
+  }
+
+
+
+}
