@@ -1,0 +1,26 @@
+<div class="carousel">
+  <tui-carousel
+    class="car"
+    [index]="index()"
+    [draggable]="true"
+    [duration]="5000"
+    (indexChange)="index.set($event)"
+  >
+    @for (e of metodologia; track $index) {
+    <div *tuiItem class="tui">
+      <div class="row">
+        <h2>{{ e.title }}</h2>
+        <img [src]="e.image" alt="" draggable="false" />
+          <p [innerHTML]="getShortText(e.informacion)"></p>
+      </div>
+    </div>
+    }
+  </tui-carousel>
+  <tui-pagination
+    (indexChange)="index.set($event)"
+    size="s"
+    class="pagination"
+    [length]="images().length"
+    [index]="index()"
+  ></tui-pagination>
+</div>

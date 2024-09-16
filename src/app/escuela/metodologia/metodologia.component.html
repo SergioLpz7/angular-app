@@ -1,0 +1,15 @@
+<div class="cont">
+
+  @for(e of metodologia; track e.title; let i = $index){
+    <h2>{{e.title}}</h2>
+    <section [class.inv]="i % 2 !== 0">
+      <img [src]="e.image">
+      <div [class]="i === 0 ? 'met' : 'corto'">
+        <p [innerHTML]="e.informacion"></p>
+      </div>
+    </section>
+  }
+  @empty{
+    <p> No hay nada</p>
+  }
+</div>

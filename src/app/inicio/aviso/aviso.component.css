@@ -4,7 +4,7 @@
   flex-flow: row nowrap;
   font-size: larger;
   justify-content: space-around;
-  background-color: #d8fca9;
+  background-color: var(--color-4);
   width: 100%;
   padding: 4px;
   box-sizing: border-box;
@@ -18,7 +18,7 @@
 
 .aviso a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .iconos {
@@ -45,7 +45,7 @@
 
     & p {
 
-      font-size: .8em; 
+      font-size: 1vw; 
     }
     & .iconos {
       flex-direction: row;

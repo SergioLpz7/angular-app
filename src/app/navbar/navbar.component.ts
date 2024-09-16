@@ -29,6 +29,15 @@ export class NavbarComponent {
     }
   }
 
+  resetDropdown(){
+    const arrow = document.getElementById('arrow')
+    this.showit = false
+    this.mostrar = false
+    if (arrow){
+      arrow.style.transform = 'rotate(0deg)'
+    }
+  }
+
   @HostListener('document:click', ['$event'])
   onClick(e: Event) {
     const click = e.target as HTMLElement;
@@ -40,17 +49,13 @@ export class NavbarComponent {
       const arrow = document.getElementById('arrow');
 
       if (arrow) {
-        if (this.showit) {
-          arrow.style.transform = 'rotate(90deg)';
-        } else {
-          arrow.style.transform = 'rotate(0deg)';
-        }
+        arrow.style.transform = 'rotate(0deg)'
       }
     }
 
     if (nav && nav.classList.contains('navbar') && !nav.contains(click)) {
       this.mostrar = false;
-      nav.classList.remove('show');
+      // nav.classList.remove('show');
     }
   }
 }

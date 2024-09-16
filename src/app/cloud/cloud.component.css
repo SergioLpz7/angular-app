@@ -1,0 +1,15 @@
+.cloudCont {
+  position: relative;
+  width: 20%;
+  height: auto; 
+}
+
+.cloud {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+text{
+  height: auto;
+}

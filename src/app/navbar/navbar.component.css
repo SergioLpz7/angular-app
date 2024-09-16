@@ -74,7 +74,7 @@ a {
 
 /* Estilos para ordenador */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   nav {
     position: fixed;
     top: 2em;

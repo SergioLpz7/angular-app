@@ -16,65 +16,45 @@
   height: 15em;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 0 8px 0px #aeaeae;
+
+}
+p{
+  text-align: center;
 }
 .fot p {
   font-size: 1.4em;
   padding: 1em;
   font-weight: bold;
 }
-.ofr {
-  display: block;
-  padding: 20px;
-}
 
-.cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  width: 80%;
-  margin-top: 1em;
-}
-
-span {
-  background: var(--card, #54e8ff);
-  margin-bottom: 10px;
-  border-radius: 50px;
-  font-size: 1.4em;
-  font-weight: bold;
-  width: 100%;
-  display: block;
-  padding: 1em;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.7;
-  color: #555454;
-  text-align: start;
-}
 h2,
 h3 {
   font-weight: bold;
 }
 h2 {
   font-size: 4.3vh;
-  color: #010152;
+  color: var(--color-y);
   text-align: center;
 }
 h3 {
   font-size: 3vh;
-  padding: 1vh 0;
+  padding: 1vh 1vh;
 }
 
-@media screen and (min-width: 600px) {
+
+/* h2, h3{
+  font-family: hibernate;
+} */
+
+app-carousel{
+  width: 90%;
+  padding: 2em;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 900px) {
   .fot {
     display: block;
   }
@@ -89,15 +69,26 @@ h3 {
   .card {
     width: 45%;
   }
+  p{
+    text-align: start;
+  }
+  .com {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 3em;
+
+    & .comida {
+      width: auto;
+      height: 20em;
+      object-fit: cover;
+      object-position: center bottom;
+    }
+    & p{
+      width: 40%;
+      line-height: 2;
+    }
+  }
 }
 
-@media screen and (min-width: 900px) {
-  .card {
-    width: 22%;
-  }
-  span {
-    width: auto;
-    font-size: 1.5vw;
-    /* word-wrap: break-word; */
-  }
-}
+

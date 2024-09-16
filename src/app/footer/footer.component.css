@@ -1,4 +1,5 @@
 footer {
+  margin-top: 2em;
   display: flex;
   flex-flow: column wrap;
   background-color: var(--color-4);
@@ -46,10 +47,12 @@ hr {
 a {
   text-decoration: none;
 }
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 800px) {
   footer {
     flex-direction: row;
     justify-content: space-around;
+    padding: 1.2em;
 
     & img {
       display: block;
@@ -73,7 +76,7 @@ a {
   p {
     font-size: 1.6em;
   }
-  b:hover {
+  strong:hover {
     border-bottom: #ff0000 solid 2px;
   }
 }

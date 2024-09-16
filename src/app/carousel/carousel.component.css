@@ -1,0 +1,41 @@
+.tui {
+  border: 1px solid var(--color-x);
+  border-radius: 10px;
+  width: auto;
+}
+
+h2 {
+  text-align: center;
+  padding: 1em;
+}
+img {
+  width: 60%;
+  height: 40em;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0px #aeaeae;
+
+}
+.row {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  /* gap: 4em; */
+}
+
+p {
+  padding: 2em 1em;
+  line-height: 2;
+  text-overflow: ellipsis;
+  /* width: 100%; */
+}
+.pagination{
+  padding: .8em;
+}
+
+@media screen and (max-width:900px) {
+  img {
+    height: auto;
+  }
+}

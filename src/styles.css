@@ -11,10 +11,16 @@
   --color-6: #ffceaf;
   --color-7: #c4f0f2;
   --color-8: #ffd1d0;
+  --color-x: #e99a83;
+  --color-y: #e79982;
+  --color-b: #ffedce;
 }
 @font-face {
   font-family: hibernate;
   src: url(/fuentes/Hibernate.otf);
+
+  font-family: hammersmith;
+  src: url(/fuentes/HammersmithOne-Regular.ttf);
 }
 
 *::after,
@@ -27,8 +33,15 @@
 }
 * {
   color: #603300;
-  
+  font-family: hammersmith;
 }
+
 body {
   background-color: #ffedce;
+} 
+h2 {
+  color: var(--color-y);
+}
+b {
+  color: var(--color-x);
 }

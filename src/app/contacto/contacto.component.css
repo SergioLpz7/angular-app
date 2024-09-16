@@ -1,54 +1,124 @@
-.cont{
+.cont {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
   margin-top: 5em;
   min-height: 20vh;
   margin-bottom: 2em;
-
-
-  & section{
-    display: flex;
-    width: 100%;
-    height: 30%;
-    justify-content: space-evenly;
-    margin-top: 2em;
-    
-  }
-  & img {
-    width: 25%;
-  }
-  & form {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 60%;
-    & div{
-      width: 100%;
-    }
-    .nombre {
-      display: flex;
-      justify-content:space-between;
-      width: 100%;
-        & input{
-          width: 48%;
-        }
-    }
-  }
+  font-family: Arial, sans-serif;
 }
-input {
-  border: solid 1px;
-  border-radius: 0;
-  padding: 1.3em;
+
+h2 {
+  /* color: #333; */
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
-#email {
+
+h3 {
+  /* color: #666; */
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
-}
-#message {
-  width: 100%;
+  align-items: center;
+  max-width: 1200px;
+  padding: 2em;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* background-color: #f9f9f9; */
+  border-radius: 12px;
 }
 
-img{
-  width: 30%;
+img {
+  width: 90%;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+
+form div {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.nombre {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.nombre input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+button.btn {
+  padding: 1em 2em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #002d5d;
+}
+
+.mapa{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  & iframe{
+    width: 90%;
+    height: 100%;
+    border: none;
+  }
+  
+}
+
+@media screen and (min-width:600px) {
+  section {
+    flex-direction: row;
+    object-fit: none;
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
 }

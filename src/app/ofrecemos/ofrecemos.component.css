@@ -1,0 +1,126 @@
+main {
+  padding: 3em 1em;
+}
+.ofr {
+  display: block;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  margin-top: 1em;
+}
+
+span {
+  background: var(--card, #54e8ff);
+  margin-bottom: 10px;
+  border-radius: 50px;
+  font-size: 1.4em;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  padding: 1em;
+}
+
+.card p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: #555454;
+}
+
+h2,
+h3,
+span {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 4.3vh;
+  color: var(--color-y);
+  text-align: center;
+}
+h3 {
+  font-size: 3vh;
+  padding: 1vh 1vh;
+}
+
+.comidaDiv {
+  padding-top: 2em;
+}
+.com {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+.comida {
+  width: 80%;
+  height: 25em;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 #c2c2c2;
+}
+.com p {
+  width: 80%;
+  line-height: 2;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 45%;
+  }
+
+  .com {
+    flex-flow: row;
+    gap: 1em;
+  }
+  .com p {
+    text-align: start;
+    width: 45%;
+  }
+  .comida {
+    width: 40%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    padding: 7em 1em;
+  }
+  .card {
+    width: 22%;
+  }
+  span {
+    width: auto;
+    font-size: 1.5vw;
+    /* word-wrap: break-word; */
+  }
+  .com{
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+  }
+  .comida{
+    width: 30%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center 70%;  
+    
+  }
+  
+  .com p{
+    width: 40%;
+  }
+}
