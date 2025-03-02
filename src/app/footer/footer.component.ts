@@ -6,15 +6,12 @@ import { DatosService } from '../service/datos.service';
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.css',
 })
 export class FooterComponent {
-
-  get datos (){
-    return this.datosService.datos
+  get datos() {
+    return this.datosService.datos;
   }
 
-  constructor (
-    private datosService: DatosService
-  ){}
+  constructor(private datosService: DatosService) {}
 }

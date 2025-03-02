@@ -52,15 +52,21 @@ a {
   footer {
     flex-direction: row;
     justify-content: space-around;
+    align-items: start;
     padding: 1.2em;
 
     & img {
       display: block;
-      width: 20%;
+      width: 18%;
+      align-self: center;
+      object-fit: contain;
     }
     & section {
       width: 40%;
+      height: 100%;
+      padding: 0;
       align-items: center;
+      justify-content: start;
       & div {
         margin-top: 2em;
       }
@@ -78,5 +84,9 @@ a {
   }
   strong:hover {
     border-bottom: #ff0000 solid 2px;
+  }
+
+  .div-legal a:hover {
+    color: rgb(55, 55, 254);
   }
 }

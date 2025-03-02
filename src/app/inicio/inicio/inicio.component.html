@@ -1,13 +1,15 @@
-<div class="contenedor">
-  <app-aviso />
-  <video src="./video_portada.mp4" type="video/mp4"></video>
-  <div class="texto">
-    <h1>ESCUELA INFANTIL BILINGÜE</h1>
-    <h1>0-3 AÑOS</h1>
+<div class="scroll">
+  <div class="contenedor">
+    <app-aviso />
+    <video src="./video_portada.mp4" type="video/mp4"></video>
+    <div class="texto">
+      <h1>ESCUELA INFANTIL BILINGÜE</h1>
+      <h1>0-3 AÑOS</h1>
+    </div>
+    <div class="img">
+      <img src="./Little_Rainbows.png" alt="Imagen" />
+    </div>
+    <!-- <button class="scroll" (click)="ScrollTo('informacion')">Abajo</button> -->
   </div>
-  <div class="img">
-    <img src="./Little_Rainbows.png" alt="Imagen">
-  </div>
-  <!-- <button class="scroll" (click)="ScrollTo('informacion')">Abajo</button> -->
+  <app-informacion id="informacion" />
 </div>
-<app-informacion id="informacion"/>

@@ -3,11 +3,11 @@ import { TuiCarousel, TuiPagination } from '@taiga-ui/kit';
 import { DatosService } from '../service/datos.service';
 
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [TuiPagination, TuiCarousel],
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css'],
+    selector: 'app-carousel',
+    standalone: true,
+    imports: [TuiPagination, TuiCarousel],
+    templateUrl: './carousel.component.html',
+    styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent {
   images = signal<string[]>([]);

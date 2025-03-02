@@ -6,10 +6,12 @@
       <ul class="drop" [ngClass]="{ show: showit }">
         <li><a routerLinkActive="active" routerLink="/escuela/instalaciones" [ngClass]="{ yees: showit }" (click)="resetDropdown()">Instalaciones</a></li>
         <li><a routerLinkActive="active" routerLink="/escuela/metodologia" [ngClass]="{ yees: showit }" (click)="resetDropdown()">Metodología</a></li>
+        <li><a routerLinkActive="active" routerLink="/escuela/uniforme" [ngClass]="{ yees: showit }" (click)="resetDropdown()">Uniforme</a></li>
+        <li><a routerLinkActive="active" routerLink="/escuela/metodologia" [ngClass]="{ yees: showit }" (click)="resetDropdown()">Equipo docente</a></li>
       </ul>
     </li>
     <li><a routerLinkActive="active" routerLink="/contacto/" (click)="resetDropdown()">Contacto</a></li>
-    <li><a routerLinkActive="active" routerLink="/ofrecemos" (click)="resetDropdown()">Que ofrecemos</a></li>
+    <li><a routerLinkActive="active" routerLink="/ofrecemos" (click)="resetDropdown()">Qué ofrecemos</a></li>
   </ul>
 </nav>
 <i class="fa-solid fa-bars" id="menu" (click)="mobileMenu()"></i>

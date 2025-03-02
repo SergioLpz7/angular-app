@@ -8,6 +8,11 @@
     color: #603300;
   }
 
+  & h2:first-of-type{
+    color: var(--color-y);
+    text-align: center;
+  }
+
   & section {
     display: flex;
     flex-direction: column;
@@ -46,6 +51,7 @@
         /* line-height: 2; */
         /* width: 40%; */
       }
+   
     }
   }
 }

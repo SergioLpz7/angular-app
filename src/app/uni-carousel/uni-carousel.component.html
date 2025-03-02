@@ -1,0 +1,19 @@
+<div class="car">
+  <tui-carousel
+    [index]="index()"
+    [draggable]="true"
+    [duration]="5000"
+    (indexChange)="index.set($event)"
+  >
+    @for (image of images(); track $index) {
+    <div *tuiItem>
+      <img [src]="image" draggable="false" />
+    </div>
+    }
+  </tui-carousel>
+  <tui-pagination
+    size="s"
+    [length]="images().length"
+    [index]="index()"
+  ></tui-pagination>
+</div>

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { DatosService } from '../../service/datos.service';
 
 @Component({
-  selector: 'app-metodologia',
-  standalone: true,
-  imports: [],
-  templateUrl: './metodologia.component.html',
-  styleUrl: './metodologia.component.css'
+    selector: 'app-metodologia',
+    standalone: true,
+    imports: [],
+    templateUrl: './metodologia.component.html',
+    styleUrl: './metodologia.component.css'
 })
 export class MetodologiaComponent {
 

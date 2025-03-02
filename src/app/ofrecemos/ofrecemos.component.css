@@ -5,7 +5,9 @@ main {
   display: block;
   padding: 20px;
 }
-
+h3{
+  text-align: center;
+}
 .cards {
   display: flex;
   justify-content: space-around;
@@ -122,5 +124,6 @@ h3 {
   
   .com p{
     width: 40%;
+    font-size: 1.4em;
   }
 }

@@ -3,11 +3,11 @@ import { Component, Host, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [NgClass, RouterLink, RouterLinkActive],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+    selector: 'app-navbar',
+    standalone: true,
+    imports: [NgClass, RouterLink, RouterLinkActive],
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   showit = false;

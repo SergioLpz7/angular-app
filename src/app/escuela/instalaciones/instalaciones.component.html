@@ -1,17 +1,17 @@
 <div class="inst">
-  <h2>Nuestras instalaciones</h2>
+  <h2>NUESTRAS INSTALACIONES</h2>
   <div class="cards">
     <div class="card">
       <span style="--card: var(--color-1)">Un aula de 0-1 años</span>
     </div>
     <div class="card">
-      <span style="--card: var(--color-2)">Tres aulas de 1-2 años</span>
+      <span style="--card: var(--color-2)">Dos aulas de 1-2 años</span>
     </div>
     <div class="card">
-      <span style="--card: var(--color-3)">Dos aulas de 2-3 años</span>
+      <span style="--card: var(--color-3)">Un aulas de 2-3 años</span>
     </div>
     <div class="card">
-      <span style="--card: var(--color-4)">Patio interior</span>
+      <span style="--card: var(--color-4)">Patio exterior</span>
     </div>
     <div class="card">
       <span style="--card: var(--color-5)">Espacio psicomotricidad</span>
@@ -24,11 +24,21 @@
     motricidad a través de actividades divertidas como juegos, manipulación y
     experimentación. En cada etapa, buscamos que los niños sean más autónomos,
     aprendan activamente y expresen sus emociones. Adaptamos las rutinas y
-    materiales según lo que cada grupo necesita. Además, contamos con amplios
-    espacios al aire libre y una sala de psicomotricidad para que los niños
-    exploren, jueguen y crezcan tanto física como emocionalmente.<br />
-    <br />
-    Actualmente estamos trabajando para abrir nuestras puertas en febrero de
-    2025.
+    materiales según lo que cada grupo necesita. Además, contamos con espacios
+    al aire libre y una sala de psicomotricidad para que los niños exploren,
+    jueguen y crezcan tanto física como emocionalmente.
   </p>
+</div>
+<div class="galeria">
+
+  @for (images of grupoImg; track $index) {
+    <div class="column">
+      @for (imgs of images; track $index) {
+        <img src="{{imgs}}" alt="imagen" />
+      }
+
+    </div>
+  }
+
+
 </div>

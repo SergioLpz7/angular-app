@@ -80,7 +80,7 @@ export class DatosService {
           potencial y fortalecemos su autoestima, <b>iniciativa</b> y aprendizaje.`,
     },
     juego: {
-      title: 'Juego Heuristico y experimentación',
+      title: 'Juego heurístico y experimentación',
       image: 'arena.jpg',
       informacion: ` Queremos que los niños se pregunten para qué sirven los objetos que les
           mostramos, los <b>clasifiquen</b>, <b>investiguen</b> y los

@@ -1,0 +1,45 @@
+.uni {
+  padding: 4em;
+  text-align: center;
+
+  & h2 {
+    padding: 1.4em 0;
+    font-size: 2rem;
+  }
+}
+.row {
+    display: block;
+    
+    
+    & .texto{
+
+        & p {
+            padding: 0.3em;
+            font-size: 1.2rem;
+        }
+    }
+    & app-uni-carousel {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+  
+    .row{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & .texto{
+            width: 40%;
+            & p{
+                font-size: 1.6vw;
+            }
+        }
+        
+        & app-uni-carousel{
+            width: 40%;
+        }
+    }
+
+}

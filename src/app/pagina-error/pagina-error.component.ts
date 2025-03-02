@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pagina-error',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-pagina-error',
+    imports: [],
+    template: `
   <h1>Error 404</h1>
   <p>Este link no existe, por favor refirijase a: <a href="/inicio/inicio">Inicio</a></p>`,
-  styles: ``
+    styles: ``
 })
 export class PaginaErrorComponent {
 

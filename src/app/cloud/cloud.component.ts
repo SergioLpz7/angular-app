@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-cloud',
-  standalone: true,
-  imports: [],
-  templateUrl: './cloud.component.html',
-  styleUrl: './cloud.component.css'
+    selector: 'app-cloud',
+    imports: [],
+    templateUrl: './cloud.component.html',
+    styleUrl: './cloud.component.css'
 })
 export class CloudComponent {
   @Input() fillColor: string = 'blue';
