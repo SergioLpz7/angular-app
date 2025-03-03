@@ -1,7 +1,8 @@
 <nav [ngClass]="{ navbar: mostrar }">
+  <img src="Little_Rainbows.png" alt="">
   <ul>
-    <li ><a routerLinkActive="active" routerLink="/inicio/inicio" (click)="resetDropdown()">Inicio</a></li>
-    <li>
+    <li><a routerLinkActive="active" routerLink="/inicio/inicio" (click)="resetDropdown()">Inicio</a></li>
+    <li [ngClass]="{ color: showit }">
       <a (click)="Dropdown()">La Escuela <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
       <ul class="drop" [ngClass]="{ show: showit }">
         <li><a routerLinkActive="active" routerLink="/escuela/instalaciones" [ngClass]="{ yees: showit }" (click)="resetDropdown()">Instalaciones</a></li>

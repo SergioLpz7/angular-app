@@ -3,18 +3,37 @@ import { Component, Host, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-    selector: 'app-navbar',
-    standalone: true,
-    imports: [NgClass, RouterLink, RouterLinkActive],
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.css']
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [NgClass, RouterLink, RouterLinkActive],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
   showit = false;
   mostrar = false;
+  opacidad: HTMLElement | null = null;
 
   mobileMenu() {
     this.mostrar = !this.mostrar;
+
+    if (this.mostrar === true) {
+      this.opacidad = document.createElement('div');
+      // document.body.style.opacity = '0.5';
+      this.opacidad.style.position = 'absolute';
+      this.opacidad.style.top = '0';
+      this.opacidad.style.width = '100%';
+      this.opacidad.style.height = '100vh';
+      this.opacidad.style.opacity = '0.5';
+      this.opacidad.style.zIndex = 'z-index: 9';
+      this.opacidad.style.backgroundColor = 'black';
+      document.body.appendChild(this.opacidad);
+    } else {
+      if (this.opacidad) {
+        this.opacidad.remove();
+        this.opacidad = null;
+      }
+    }
   }
 
   Dropdown() {
@@ -29,12 +48,16 @@ export class NavbarComponent {
     }
   }
 
-  resetDropdown(){
-    const arrow = document.getElementById('arrow')
-    this.showit = false
-    this.mostrar = false
-    if (arrow){
-      arrow.style.transform = 'rotate(0deg)'
+  resetDropdown() {
+    const arrow = document.getElementById('arrow');
+    this.showit = false;
+    this.mostrar = false;
+    if (arrow) {
+      arrow.style.transform = 'rotate(0deg)';
+    }
+    if (this.opacidad) {
+      this.opacidad.remove();
+      this.opacidad = null;
     }
   }
 
@@ -49,12 +72,16 @@ export class NavbarComponent {
       const arrow = document.getElementById('arrow');
 
       if (arrow) {
-        arrow.style.transform = 'rotate(0deg)'
+        arrow.style.transform = 'rotate(0deg)';
       }
     }
 
     if (nav && nav.classList.contains('navbar') && !nav.contains(click)) {
       this.mostrar = false;
+      if (this.opacidad) {
+        this.opacidad.remove();
+        this.opacidad = null;
+      }
       // nav.classList.remove('show');
     }
   }
